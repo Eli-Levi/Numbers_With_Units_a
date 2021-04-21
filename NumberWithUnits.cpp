@@ -1,23 +1,22 @@
 #include "NumberWithUnits.hpp"
 #include <fstream>
 #include <stdexcept>
-
+using namespace std;
 using namespace ariel;
 
 namespace ariel
 {
-    static void read_units(ifstream &instructions)
+    void NumberWithUnits::read_units(ifstream& instructions)
     {
-        return;
     }
 
-    NumberWithUnits operator+(const NumberWithUnits a, const NumberWithUnits b)
+    NumberWithUnits NumberWithUnits::operator+(const NumberWithUnits a)
     {
         NumberWithUnits blank(5, "km");
         return blank;
     }
 
-    NumberWithUnits operator-(const NumberWithUnits a, const NumberWithUnits b)
+    NumberWithUnits NumberWithUnits::operator-(const NumberWithUnits a)
     {
         NumberWithUnits blank(5, "km");
         return blank;
@@ -60,28 +59,28 @@ namespace ariel
         return *this;
     }
 
-    bool operator<(const NumberWithUnits a, const NumberWithUnits b)
+    bool NumberWithUnits::operator<(const NumberWithUnits other) const
     {
         return false;
     }
 
-    bool operator<=(const NumberWithUnits a, const NumberWithUnits b)
+    bool NumberWithUnits::operator<=(const NumberWithUnits other) const
     {
         return false;
     }
-    bool operator>(const NumberWithUnits a, const NumberWithUnits b)
+    bool NumberWithUnits::operator>(const NumberWithUnits other) const
     {
         return false;
     }
-    bool operator>=(const NumberWithUnits a, const NumberWithUnits b)
+    bool NumberWithUnits::operator>=(const NumberWithUnits other) const
     {
         return false;
     }
-    bool operator==(const NumberWithUnits a, const NumberWithUnits b)
+    bool NumberWithUnits::operator==(const NumberWithUnits other) const
     {
         return false;
     }
-    bool operator!=(const NumberWithUnits a, const NumberWithUnits b)
+    bool NumberWithUnits::operator!=(const NumberWithUnits other) const
     {
         return false;
     }
