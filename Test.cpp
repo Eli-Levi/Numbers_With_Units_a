@@ -607,7 +607,7 @@ TEST_CASE("good case: output << working as intended with similar measure types")
     CHECK(oss6.str() == "1.5[USD]");
 }
 
-TEST_CASE("good case: input >> working as intended with similar measure types")
+/*TEST_CASE("good case: input >> working as intended with similar measure types")
 {
     NumberWithUnits a(3, "km");
     
@@ -619,12 +619,11 @@ TEST_CASE("good case: input >> working as intended with similar measure types")
 
     NumberWithUnits e(9, "hour");
 
-    NumberWithUnits f(1, "hour");
+    NumberWithUnits f(59, "min");
 
-    NumberWithUnits g(59, "min");
-
-    NumberWithUnits h(1.5, "USD");
-}
+    NumberWithUnits g(1.5, "USD");
+    add good case for input >> and bad test cases for output and input
+}*/
 
 TEST_CASE("bad case: adding incompatible measure types")
 {
@@ -1242,5 +1241,3 @@ TEST_CASE("bad case: != incompatible measure types")
     CHECK_THROWS(res = (usd != minute));
 }
 
-// incrumenter (++) what do i do if hour reachs 24/ meter reachs 1000/ gram reachs 1000 etc...
-// decrementor (--) what do i do when things hit 0?
